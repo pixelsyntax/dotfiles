@@ -6,6 +6,13 @@ set laststatus=2
 set t_Co=256
 let g:Powerline_symbols = "fancy"
 
+" Clear highlighting on escape in normal mode
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
+" call gmake 
+nnoremap <c-b> :!gmake<cr>
+
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -18,6 +25,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mhinz/vim-startify'
+
+
+Plug 'cpcsdk/vim-z80-democoding'
 " Any valid git URL is allowed
 " Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
